@@ -20040,7 +20040,6 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="U$1" library="ethernet-mikroavr" deviceset="MINI_W5500" device=""/>
-<part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="PZEM-DC1" library="pzem-dc" deviceset="PZEM-DC" device=""/>
 <part name="PZEM-DC2" library="pzem-dc" deviceset="PZEM-DC" device=""/>
@@ -20263,9 +20262,6 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <attribute name="VALUE" x="55.88" y="167.64" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="U$1" gate="G$1" x="93.98" y="137.16" smashed="yes"/>
-<instance part="P+6" gate="VCC" x="111.76" y="154.94" smashed="yes">
-<attribute name="VALUE" x="109.22" y="152.4" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="GND7" gate="1" x="66.04" y="147.32" smashed="yes">
 <attribute name="VALUE" x="63.5" y="144.78" size="1.778" layer="96"/>
 </instance>
@@ -20930,6 +20926,14 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <wire x1="38.1" y1="99.06" x2="40.64" y2="99.06" width="0.1524" layer="91"/>
 <label x="40.64" y="99.06" size="0.6096" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="3V3.2"/>
+<pinref part="U$1" gate="G$1" pin="3V3"/>
+<wire x1="106.68" y1="147.32" x2="106.68" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="149.86" x2="106.68" y2="149.86" width="0.1524" layer="91"/>
+<junction x="106.68" y="149.86"/>
+<label x="111.76" y="149.86" size="0.6096" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -20964,15 +20968,6 @@ wire to board 2.54 mm (.1 inch) pitch header</description>
 <wire x1="55.88" y1="165.1" x2="58.42" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="165.1" x2="58.42" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="P+5" gate="VCC" pin="VCC"/>
-</segment>
-<segment>
-<pinref part="U$1" gate="G$1" pin="3V3.2"/>
-<pinref part="U$1" gate="G$1" pin="3V3"/>
-<wire x1="106.68" y1="147.32" x2="106.68" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="P+6" gate="VCC" pin="VCC"/>
-<wire x1="111.76" y1="152.4" x2="111.76" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="149.86" x2="106.68" y2="149.86" width="0.1524" layer="91"/>
-<junction x="106.68" y="149.86"/>
 </segment>
 </net>
 <net name="N$10" class="0">
